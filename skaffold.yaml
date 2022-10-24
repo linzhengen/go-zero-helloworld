@@ -1,0 +1,23 @@
+# doc: https://skaffold.dev/docs/references/yaml
+apiVersion: skaffold/v2beta29
+kind: Config
+
+build:
+  tagPolicy:
+    gitCommit: {}
+  artifacts:
+    - image: api
+      context: .
+      docker:
+        dockerfile: api/Dockerfile
+    - image: rpc
+      context: .
+      docker:
+        dockerfile: rpc/Dockerfile
+
+deploy:
+  kubectl:
+    manifests:
+    - istio/mesh_default.yaml
+    - api/k8s/*
+    - rpc/k8s/*
