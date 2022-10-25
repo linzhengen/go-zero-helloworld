@@ -2,13 +2,10 @@ package config
 
 import (
 	"github.com/zeromicro/go-zero/rest"
+	"github.com/zeromicro/go-zero/zrpc"
 )
 
 type Config struct {
 	rest.RestConf
-	RpcConfig
-}
-
-type RpcConfig struct {
-	HellWorldEndpoint string `json:"HellWorldEndpoint"`
+	HelloWorld zrpc.RpcClientConf
 }

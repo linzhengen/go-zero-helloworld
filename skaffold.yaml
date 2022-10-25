@@ -18,6 +18,6 @@ build:
 deploy:
   kubectl:
     manifests:
-    - istio/mesh_default.yaml
     - api/k8s/*
     - rpc/k8s/*
+
