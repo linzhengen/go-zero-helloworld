@@ -25,9 +25,10 @@ func NewGetSayHelloLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GetSa
 }
 
 func (l *GetSayHelloLogic) GetSayHello(req *types.Request) (resp *types.Response, err error) {
-	result, err := l.svcCtx.HelloWorldGreeterClient.SayHello(l.ctx, &helloworld.HelloRequest{Name: "test"})
+	result, err := l.svcCtx.HelloWorldGreeterClient.SayHello(l.ctx, &helloworld.HelloRequest{Name: req.Name})
 	if err != nil {
 		return nil, err
 	}
+	l.Logger.Infof("say hello: %s", req.Name)
 	return &types.Response{Message: result.Message}, nil
 }

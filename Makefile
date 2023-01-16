@@ -1,5 +1,5 @@
 dev:
-	skaffold dev -v debug
+	skaffold dev -v debug --kube-context=minikube
 
 deploy-etcd:
 	helm repo add bitnami https://charts.bitnami.com/bitnami --force-update

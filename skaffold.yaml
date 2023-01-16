@@ -21,3 +21,9 @@ deploy:
     - api/k8s/*
     - rpc/k8s/*
 
+portForward:
+  - resourceType: service
+    resourceName: api-svc
+    namespace: hello-world-api
+    port: 8888
+    localPort: 8888

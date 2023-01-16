@@ -33,6 +33,18 @@ spec:
           limits:
             cpu: 1000m
             memory: 1024Mi
+        livenessProbe:
+          httpGet:
+            path: /sayHello?name=live
+            port: 8888
+          initialDelaySeconds: 6
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /sayHello?name=read
+            port: 8888
+          initialDelaySeconds: 6
+          periodSeconds: 3
 
 ---
 

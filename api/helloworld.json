@@ -26,6 +26,14 @@
             }
           }
         },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "requestBody": {},
         "tags": [
           "helloworld-api"
@@ -36,7 +44,15 @@
   "definitions": {
     "request": {
       "type": "object",
-      "title": "request"
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "request",
+      "required": [
+        "name"
+      ]
     },
     "response": {
       "type": "object",
