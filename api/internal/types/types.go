@@ -2,7 +2,7 @@
 package types
 
 type Request struct {
-	Name string `json:"name"`
+	Name string `form:"name"`
 }
 
 type Response struct {

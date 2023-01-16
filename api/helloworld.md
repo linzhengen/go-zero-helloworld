@@ -13,7 +13,7 @@
 
 ```golang
 type Request struct {
-	Name string `json:"name"`
+	Name string `form:"name"`
 }
 ```
 
