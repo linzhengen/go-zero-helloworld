@@ -2,7 +2,7 @@ module helloworld
 
 go 1.21
 
-toolchain go1.21.6
+toolchain go1.23.2
 
 require (
 	github.com/zeromicro/go-zero v1.6.2
