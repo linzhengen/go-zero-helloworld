@@ -7,7 +7,7 @@ toolchain go1.25.0
 require (
 	github.com/zeromicro/go-zero v1.8.5
 	google.golang.org/grpc v1.74.2
-	google.golang.org/protobuf v1.36.7
+	google.golang.org/protobuf v1.36.8
 )
 
 require (
